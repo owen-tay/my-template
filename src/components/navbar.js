@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import NavImage from "./images/NavImage.svg";
 import React, { useState, useRef, useLayoutEffect } from "react";
 
@@ -20,8 +19,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-100 dark:bg-slate-800">
-      <div className="max-w-7xl mx-auto  md:px-6 lg:px-8">
+    <nav className="bg-gray-100 dark:bg-slate-800 mb-3 fixed top-0 left-0 w-full z-50">
+      <div className="max-w-7xl mx-auto md:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center px-4 md:px-0">
             <Link to="/" onClick={closeMobileMenu}>

@@ -4,7 +4,6 @@ import Home from "./components/Home";
 import About from "./components/About";
 import PageNotFound from "./components/PageNotFound"
 import Navbar from "./components/navbar";
-import Footer from "./components/footer";
 
 function App() {
   
@@ -17,7 +16,6 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Footer />
     </Router>
     </div>
   );
