@@ -1,2 +1,2 @@
-template for future use.
-Includes tailwind, react-router-dom
+Includes tailwind, react-router-dom.
+Template made for future use so I can whip out basic react pages faster.
