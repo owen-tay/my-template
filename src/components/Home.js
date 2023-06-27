@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className='mt-9 '>
-      <h1>Welcome to the Home Page!</h1>
-      <p>This is the main landing page of our application.</p>
-      <Link to="/about">Go to About page</Link>
+    <div className='mt-20 '>
+      <div>
+
+    
+
+      </div>
     </div>
   );
 }

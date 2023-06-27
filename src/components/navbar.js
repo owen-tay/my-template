@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import NavImage from "./images/NavImage.svg";
+import SunSvg from "./images/sun.svg";
+import MoonSvg from "./images/moon.svg";
 import React, { useState, useRef, useLayoutEffect } from "react";
+
+
+
+
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,6 +22,8 @@ function Navbar() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+
+    
   };
 
   return (
@@ -27,7 +35,7 @@ function Navbar() {
               <img src={NavImage} className="h-8" alt="Logo" />
             </Link>
             <Link to="/" onClick={closeMobileMenu}>
-              <h1 className="ml-2 transition-colors text-black dark:text-white duration-300 hover:text-pink-400">
+              <h1 className="ml-2 text-xl transition-colors text-black dark:text-white duration-300 hover:text-pink-400">
                 Title
               </h1>
             </Link>
@@ -111,45 +119,46 @@ function Navbar() {
           }}
         >
           <div
-            id="thisone"
-            className="bg-white dark:bg-slate-800 px-4 md:px-0 text-3xl"
+            id="navDiv"
+            className="bg-gray-100 dark:bg-slate-800 px-4 md:px-0 text-4xl"
             ref={menuRef}
             style={{
-              transition: "height 0.5s, opacity 0.5s",
+              transition: "height 0.3s, opacity 2s",
               opacity: isMobileMenuOpen ? 1 : 0,
               height: isMobileMenuOpen ? "max-content" : 0,
-              display: isMobileMenuOpen ? "block" : "none",
+              display: isMobileMenuOpen ? "block" : "block",
             }}
           >
             <div className="flex flex-col items-end">
               <Link
                 to="/blog"
-                className="block transition-colors duration-200 text-black dark:text-white hover:text-pink-400 "
+                className="mt-1 block transition-colors duration-200 text-black dark:text-white hover:text-pink-400 "
                 onClick={closeMobileMenu}
               >
                 Blog
               </Link>
               <Link
                 to="/map"
-                className="block transition-colors duration-200 text-black dark:text-white hover:text-pink-400 "
+                className=" mt-1 block transition-colors duration-200 text-black dark:text-white hover:text-pink-400 "
                 onClick={closeMobileMenu}
               >
                 Maps
               </Link>
               <Link
                 to="/listings"
-                className="block transition-colors duration-200 text-black dark:text-white hover:text-pink-400 "
+                className=" mt-1  block transition-colors duration-200 text-black dark:text-white hover:text-pink-400 "
                 onClick={closeMobileMenu}
               >
                 Listings
               </Link>
               <Link
                 to="/profile"
-                className="block transition-colors duration-200 text-black dark:text-white hover:text-pink-400 "
+                className=" mt-1 block transition-colors duration-200 text-black dark:text-white hover:text-pink-400 "
                 onClick={closeMobileMenu}
               >
                 Profile
               </Link>
+
             </div>
           </div>
         </div>
